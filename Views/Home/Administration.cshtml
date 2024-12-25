@@ -1,0 +1,226 @@
+﻿@using CMS;
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@inject IHtmlLocalizer<SharedResource> Localizer
+
+
+
+@{
+
+    ViewData["Title"] = "Administration";
+
+    // list in Administration
+    List<Article> lstAdmin = new List<Article>();
+    
+    if (ViewBag.DescriptionAdministration != null)
+    {
+        lstAdmin = ViewBag.DescriptionAdministration;
+    }
+
+
+
+
+    //title data Administration
+    ArticleType titleAdministration = new ArticleType();
+    
+    if (ViewBag.TitleAdmin != null)
+    {
+        titleAdministration = ViewBag.TitleAdmin;
+    }
+
+
+
+}
+
+<div class="content">
+
+<main id="fsPageContent" class="fsPageContent">
+
+    <div b-kvlnr22316="" class="j-content-c d-flex" id="fsPageWrapper">
+
+
+
+
+
+
+        <div id="fsPageBodyWrapper" class="fsPageBodyWrapper" >
+            <div id="fsPageBody" class="fsStyleAutoclear fsPageBody">
+
+                <main id="fsPageContent" class="fsPageContent flex-row-reverse" style="outline:none;">
+                    @*                        <div class=" fsDiv fsStyleOneThird fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear mt-70px pl-70px remove-left-padding" id="fsEl_128888">
+
+
+
+
+
+                    </div>*@
+
+
+                    <div id="fsPageWrapper" class="pt-0">
+
+
+
+
+
+
+
+                        <div id="fsPageBodyWrapper" class="fsPageBodyWrapper">
+                            <div id="fsPageBody" class="fsStyleAutoclear fsPageBody">
+
+                                <main id="fsPageContent" class="fsPageContent  max-width-1340" style="outline:none;">
+
+
+
+
+                                    <div class="fsPageLayout fsLayout fsOneColumnLayout fsStyleAutoclear" id="fsEl_108864" data-use-new="true">
+
+                                        <div class=" fsDiv fsStyleAutoclear" id="fsEl_108865">
+
+
+                                            <div class="fsElement fsContent" id="fsEl_131808" data-use-new="true">
+
+                                                <div class="fsElementContent d-flex j-content-space-a">
+                                                    <div class="fsStyleTwoThirds ">
+                                                        <h1>@titleAdministration.Name</h1>
+                                                        <span class="fs_style_96">
+                                                            @Html.Raw(titleAdministration.Description)
+                                                        </span>
+
+                                                    </div>
+
+                                                    <div class=" fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear mt-70px" id="fsEl_128888">
+
+
+
+
+
+                                                    </div>
+                                                    
+
+
+                                                </div>
+
+
+                                            </div>
+                                            @foreach (var item in lstAdmin)
+                                            {
+                                            <div class="fsElement fsContainer panel-full-width panel-wide-boundary width-100" id="fsEl_131795" data-use-new="true">
+
+                                                <div class="fsElementContent">
+                                                    
+                                                    <div class="fsElement fsLayout fsTwoColumnWideRightLayout resource-duo fsStyleAutoclear" id="fsEl_131796" data-use-new="true">
+
+                                                        <div class=" fsDiv fsStyleOneThird fsStyleColumn fsStyleColumn-1 fsStyleAutoclear pr-0" id="fsEl_131797">
+                                                           
+                                                            
+                                                                
+                                                            
+                                                            <div class="fsElement fsContent" id="fsEl_131798" data-use-new="true">
+
+                                                                <header>
+                                                                    <div class="fsElementHeaderContent">
+                                                                        <h4>@item.Name</h4>
+
+                                                                    </div>
+                                                                </header>
+                                                                <div class="fsElementContent">
+                                                                    <p>
+                                                                        @Html.Raw(item.Description)
+
+                                                                    </p>
+
+                                                                    <p>&nbsp;</p>
+
+
+                                                                </div>
+
+
+                                                            </div>
+                                                            
+
+
+
+                                                        </div>
+                                                        <div class=" fsDiv fsStyleTwoThirds fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear" id="fsEl_131799">
+
+                                                            <div class="fsElement fsResourceElement fsSingleItem resource-shadow" id="fsEl_131933" data-use-new="true" data-source-element-id="131933" data-source-page-id="7185">
+
+                                                                <div class="fsElementContent">
+                                                                        <article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Support person at computer smiling" data-aspect-ratio="0.62734375" style="" src="/@(item.FullImagePath)_800x500.webp"></picture></figure></article>
+                                                                </div>
+
+
+                                                            </div>
+
+
+
+
+                                                        </div>
+
+
+
+
+
+                                                    </div>
+                                                    
+
+
+                                                </div>
+
+
+                                            </div>
+                                            @*    title action   *@
+                                            <div class="fsElement fsContent" id="fsEl_131924" data-use-new="true">
+
+                                                <div class="fsElementContent">
+                                                    
+                                                        <span class="fs_style_110">
+                                                            @Html.Raw(item.Description)
+                                                        </span>
+                                                    
+
+
+                                                </div>
+
+
+                                            </div>
+                                            }
+                                            
+
+                                 
+
+
+
+
+                                        </div>
+
+
+
+
+                                    </div>
+
+
+
+                                </main>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
+</div>
+

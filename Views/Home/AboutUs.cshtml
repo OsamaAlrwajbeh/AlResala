@@ -1,0 +1,661 @@
+﻿@using CMS;
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@inject IHtmlLocalizer<SharedResource> Localizer
+
+
+@{
+    // AboutUs Title parent
+    ArticleType AboutUsParent = new ArticleType();
+    if (ViewBag.TitleAboutUs != null)
+    {
+        AboutUsParent = ViewBag.TitleAboutUs;
+    }
+
+
+    Article MessageUs = new Article();
+
+    if (ViewBag.Message != null)
+    {
+        MessageUs = ViewBag.Message;
+    }
+
+    Article vision = new Article();
+
+    if (ViewBag.Vision != null)
+    {
+        vision = ViewBag.Vision;
+    }
+
+
+    //data News
+    List<Article> News = new List<Article>();
+    if (ViewBag.News != null)
+    {
+        News = ViewBag.News;
+    }
+
+
+
+
+    ArticleType NewsParent = new ArticleType();
+
+    if (ViewBag.TitleNews != null)
+    {
+        NewsParent = ViewBag.TitleNews;
+    }
+
+
+
+
+    //statistics section
+    List<Article> stSection = new List<Article>();
+
+    if (ViewBag.statSection != null)
+    {
+        stSection = ViewBag.statSection;
+
+    }
+
+    // int x = parseInt(@ViewBag.NumCtSudents.Description;
+
+
+
+
+
+
+    ViewData["Title"] = "AboutUs";
+}
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<div id="fsPageWrapper">
+
+
+
+
+
+    @*    <header id="fsHeader" class="fsHeader">
+    <div class=" fsBanner fsStyleAutoclear" id="fsEl_105048" data-settings-id="104258" data-use-new="true">
+    </div>
+
+
+    </header>*@
+
+    <div id="fsPageBodyWrapper" class="fsPageBodyWrapper padding-0">
+        <div id="fsPageBody" class="fsStyleAutoclear fsPageBody">
+
+            <main id="fsPageContent" class="fsPageContent">
+                <div class=" fsDiv fsStyleAutoclear" id="fsEl_108859">
+                    <header id="fsHeader" class="fsHeader">
+                        <div id="modal" class="modal">
+                            <span id="modal-close" class="modal-close">×</span>
+                            <img id="modal-content" class="modal-content">
+                            <div id="modal-caption" class="modal-caption"></div>
+                        </div>
+
+
+                        <div class=" fsBanner fsStyleAutoclear" id="fsEl_105048" data-settings-id="104258" data-use-new="true">
+
+                            <div class="fsElement fsContainer hero-combo hero-offset hero-green-grey hero-texture" style="    height: 50vh;
+    background-position: center top;
+background-image:url('/@(AboutUsParent.FullImagePath)_1920x1080.webp')" id="fsEl_117208" data-use-new="true" has-breadcrumbs="" has-content="" columns="" resource="" updated="">
+
+                                <div class="fsElementContent">
+                                    <div class="fsElement fsNavigation fsBreadcrumb" id="fsEl_117209" data-use-new="true">
+
+                                        <div class="fsElementContent">
+                                            <nav aria-label="breadcrumbs">
+                                                <ul>
+                                                    <li aria-current="location">
+                                                        <a href="@(ViewBag.Theme == "ar"? "/ar":"/en")/Home/Index">@Localizer["Home"]</a> <span aria-hidden="true" class="fsNavBreadcrumbSeperator">&gt;</span>
+                                                    </li>
+                                                    <li>
+                                                        @Localizer["AboutUs"]
+
+                                                    </li>
+                                                    @*                                                    <li>
+                                                    <a href="/school-websites.html">School Websites</a> <span aria-hidden="true" class="fsNavBreadcrumbSeperator">&gt;</span>
+                                                    </li>*@
+
+
+                                                </ul>
+                                            </nav>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="fsElement fsLayout fsTwoColumnLayout fsStyleAutoclear" id="fsEl_117210" data-use-new="true">
+
+                                        <div class=" fsDiv fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_117211">
+
+                                            <div class="fsElement fsContent" id="fsEl_117212" data-use-new="true">
+
+                                                <div class="fsElementContent">
+                                                    <h1>@Localizer["AboutUs"]</h1>
+                                                    <span class="fs_style_96">@AboutUsParent.Name</span>
+
+                                                </div>
+                                                @*
+                                                <footer>
+                                                <div class="fsElementFooterContent">
+                                                <p><a class="fs_style_104 fs_style_101" href="/Home/ContactUs">@Localizer["ContactUs"]</a></p>
+
+                                                </div>
+                                                </footer>
+                                                *@
+
+                                            </div>
+
+
+
+
+                                        </div>
+                                        <div class=" fsDiv fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear" id="fsEl_117213">
+
+                                            <div class="fsElement fsResourceElement fsSingleItem resource-shadow" id="fsEl_117214" data-use-new="true" data-source-element-id="117214" data-source-page-id="6977">
+
+                                                <div class="fsElementContent">
+                                                    <article class="fsResource fsResourceTypeImage">
+                                                        <figure>
+                                                            <picture>
+                                                                <img alt="Image About Us" data-aspect-ratio="0.6432291666666666" style="display:none" src="">
+                                                            </picture>
+                                                        </figure>
+                                                    </article>
+                                                </div>
+
+
+                                            </div>
+
+
+
+
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+                    </header>
+
+                    <div class="fsElement fsContent d-flex j-content-c" id="fsEl_131808" data-use-new="true">
+
+                        <div class="fsElementContent d-flex j-content-space-a max-width-1340">
+                            <div class="fsStyleTwoThirds ">
+                                <h1>@AboutUsParent.Name</h1>
+                                <span class="fs_style_96">
+                                    @Html.Raw(AboutUsParent.Description)
+                                </span>
+                            </div>
+                            <div class=" fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear mt-70px" id="fsEl_128888">
+                            </div>
+                            <section class="fsElement fsNavigation fsList nav-sub mt-70px" id="fsEl_128889" data-use-new="true" aria-label="OUR COMPANY" updated="">
+
+                                <header>
+
+                                    <h2 class="fsElementTitle">@AboutUsParent.Name</h2>
+                                </header>
+                                <div class="fsElementContent">
+                                    <nav>
+                                        <ul class="fsNavLevel1">
+                                            <li class="fsNavCurrentPage">
+                                                <a href="@(ViewBag.Theme == "ar"? "/ar":"/en")/Home/AboutUs">
+                                                    <span>
+                                                        <span><span>@Localizer["VisionAndMission"]</span></span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="@(ViewBag.Theme == "ar"? "/ar":"/en")/Home/Administration">
+                                                    <span>
+                                                        <span><span>@Localizer["Administration"]</span></span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li><a href="@(ViewBag.Theme == "ar"? "/ar":"/en")/Home/OurTeam"><span><span><span>@Localizer["OurTeam"]</span></span></span></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+
+                            </section>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                @*    MessageUs   *@
+                <div class="fsElement fsContainer panel-full-width panel-wide-boundary mt-70px" id="fsEl_129731" data-use-new="true">
+
+                    <div class="fsElementContent">
+                        <div class="fsElement fsLayout fsTwoColumnWideRightLayout resource-duo fsStyleAutoclear" id="fsEl_129732" data-use-new="true">
+
+                            <div class=" fsDiv fsStyleOneThird fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_129733">
+
+
+
+                                <section class="fsElement fsContent" id="fsEl_129737" data-use-new="true" aria-label="Our clients">
+
+                                    <header>
+                                        <h2 class="fsElementTitle">  @MessageUs.Name </h2>
+                                        <div class="fsElementHeaderContent">
+                                            @*<h4>Their work inspires <em>us.</em></h4>*@
+
+                                        </div>
+                                    </header>
+                                    <div class="fsElementContent">
+                                        <p>@Html.Raw(MessageUs.Description)</p>
+
+
+                                    </div>
+
+
+
+                                </section>
+
+
+
+
+                            </div>
+                            <div class=" fsDiv fsStyleTwoThirds fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear" id="fsEl_129735">
+
+                                <div class="fsElement fsResourceElement fsSingleItem resource-shadow" id="fsEl_129738" data-use-new="true" data-source-element-id="129738" data-source-page-id="7183">
+
+                                    <div class="fsElementContent">
+                                        <article class="fsResource fsResourceTypeImage"><figure><picture><img alt=" " data-aspect-ratio="0.6911871813546977" style="" src="/@(MessageUs.FullImagePath)_500x500.webp"></picture></figure></article>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                @*   vision  *@
+
+                <div class="fsElement fsContainer panel-full-width panel-wide-boundary pb-70px" id="fsEl_129731" data-use-new="true">
+
+                    <div class="fsElementContent">
+                        <div class="fsElement fsLayout fsTwoColumnWideRightLayout resource-duo fsStyleAutoclear" id="fsEl_129732" data-use-new="true">
+
+                            <div class=" fsDiv fsStyleOneThird fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_129733">
+
+
+
+                                <section class="fsElement fsContent" id="fsEl_129737" data-use-new="true" aria-label="Our clients">
+
+                                    <header>
+                                        <h2 class="fsElementTitle">@vision.Name</h2>
+                                        <div class="fsElementHeaderContent">
+                                            @*<h4>Their work inspires <em>us.</em></h4>*@
+
+                                        </div>
+                                    </header>
+                                    <div class="fsElementContent">
+                                        <p> @Html.Raw(vision.Description)</p>
+
+
+                                    </div>
+
+
+
+                                </section>
+
+
+
+
+                            </div>
+                            <div class=" fsDiv fsStyleTwoThirds fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear" id="fsEl_129735">
+
+                                <div class="fsElement fsResourceElement fsSingleItem resource-shadow" id="fsEl_129738" data-use-new="true" data-source-element-id="129738" data-source-page-id="7183">
+
+                                    <div class="fsElementContent">
+                                        <article class="fsResource fsResourceTypeImage"><figure><picture><img alt="" data-aspect-ratio="0.6911871813546977" style="" src="/@(vision.FullImagePath)_500x500.webp"></picture></figure></article>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                @*   Percentages        *@
+                <section class="fsElement fsContainer panel-full-width panel-full-boundary panel-light-grey panel-padding-thick" id="fsEl_130310" data-use-new="true" aria-label="By the numbers">
+
+                    <div class="fsElementContent">
+
+                        <div class="fsElement fsLayout fsThreeColumnLayout infographic fsStyleAutoclear" id="fsEl_130311" data-use-new="true">
+
+                            @*
+                            @foreach (var item in stSection)
+                            {
+                            <div class=" fsDiv fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_130312">
+
+                            <section class="fsElement fsContent infographic" id="fsEl_130313" data-use-new="true" aria-label="115">
+
+                            <header>
+                            <h2 class="fsElementTitle" >@Html.Raw(item.Description)</h2>
+                            </header>
+                            <div class="fsElementContent">
+                            <h4>@item.Name</h4>
+
+
+                            </div>
+
+
+                            </section>
+
+
+
+
+                            </div>
+                            }
+                            *@
+                            <div class="circle fsDiv fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_130312">
+
+                                <section class=" fsElement fsContent infographic" id="fsEl_130313" data-use-new="true" aria-label="115">
+
+                                    <header>
+
+
+                                        <h2 class="counter fsElementContent" data-target="@ViewBag.NumCtSudents.Name">1</h2>
+                                    </header>
+                                    <div class="fsElementTitle">
+                                        <h4>@Html.Raw(ViewBag.NumCtSudents.Description)</h4>
+
+                                    </div>
+
+
+                                </section>
+
+
+                            </div>
+                            <div class="circle fsDiv fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_130312">
+
+                                <section class="fsElement fsContent infographic" id="fsEl_130313" data-use-new="true" aria-label="115">
+
+                                    <header>
+                                        <h2 class="counter fsElementContent" data-target="@ViewBag.PrcOutstanding.Name">1</h2>
+                                    </header>
+                                    <div class="fsElementTitle">
+                                        <h4>@Html.Raw(ViewBag.PrcOutstanding.Description)</h4>
+
+                                    </div>
+
+
+                                </section>
+
+
+                            </div>
+                            <div class="circle fsDiv fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_130312">
+
+                                <section class="fsElement fsContent infographic" id="fsEl_130313" data-use-new="true" aria-label="115">
+
+                                    <header>
+                                        <h2 class="counter fsElementContent" data-target="@ViewBag.NumGrades.Name">1</h2>
+                                    </header>
+                                    <div class="fsElementTitle">
+                                        <h4>@Html.Raw(ViewBag.NumGrades.Description)</h4>
+
+                                    </div>
+
+
+                                </section>
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                </section>
+
+
+                <div class="fsElement fsContent" id="fsEl_130865" data-use-new="true">
+
+                    <div class="fsElementContent">
+                        <h2><span class="fs_style_97">@NewsParent.Name</span></h2>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                @*     latest New         *@
+
+                <div class="what-we-offer-container">
+
+                    <div class=" fsDiv fsStyleAutoclear" id="fsEl_105799">
+
+
+
+
+
+
+                        @{
+                            //list view 3 news just
+                            List<Article> NewsList = new List<Article>();
+                            if (News.Count >= 3)
+                            {
+                                NewsList = News.Take(3).ToList();
+                            }
+                            else
+                            {
+                                NewsList = News;
+                            }
+
+                        }
+
+                        <div class="fsElement fsLayout fsThreeColumnLayout fsStyleAutoclear what-we-offer-items-container" id="fsEl_130866" data-use-new="true">
+
+
+                            <div class="fsElement fsPostElement fsSlideshow showcase-slideshow fsThumbnailOriginal fsThumbnailXLarge fsItemCount_0 fsSlideshowHorizontal" id="fsEl_122920" data-use-new="true" data-overwrite-title="">
+
+                                <div class="fsElementContent">
+
+
+
+                                    <div class="fsElementSlideshow"
+                                         aria-label="Slideshow"
+                                         data-adaptive-height="true"
+                                         data-autoplay="false"
+                                         data-autoplay-speed="1"
+                                         data-arrows="true"
+                                         data-dots="true"
+                                         data-fade="false"
+                                         data-slides-to-show="1"
+                                         data-vertical="false">
+
+
+                                        @{
+
+                                            @*   for data news    *@
+                                            @foreach (Article item in NewsList)
+                                            {
+                                                <article class="fsStyleAutoclear fsBoard-792 fsCategory-1270 fsTag-203 fsTag-2005" data-post-id="13246" data-authenticated-comments="true" aria-labelledby="fsArticle_122920_13246">
+                                                    @*image 1*@
+                                                    @*
+                                            <div class="fsThumbnail fsPostLink " target="_blank" rel="noopener noreferrer"><img data-aspect-ratio="0.6390625" data-image-sizes="[{&quot;url&quot;:&quot;/assets/img/school/image00023.jpeg&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;/assets/img/school/image00023.jpeg&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;/assets/img/school/image00023.jpeg&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;/assets/img/school/image00023.jpeg&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;/assets/img/school/image00023.jpeg&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;/assets/img/school/image00023.jpeg&quot;,&quot;width&quot;:1920}]" alt="Not Found" src="@(item.FullImagePath)_500×500.webp" /></div>
+                                            *@
+                                                    <div class="fsThumbnail fsPostLink " target="_blank" rel="noopener noreferrer"><img data-aspect-ratio="0.6390625" data-image-sizes="[{&quot;url&quot;:&quot;/@(item.FullImagePath)_800x800.webp&quot;,&quot;width&quot;:256},{&quot;url&quot;:&quot;/@(item.FullImagePath)_800x800.webp&quot;,&quot;width&quot;:512},{&quot;url&quot;:&quot;/@(item.FullImagePath)_800x800.webp&quot;,&quot;width&quot;:800},{&quot;url&quot;:&quot;/@(item.FullImagePath)_800x800.webp&quot;,&quot;width&quot;:1200},{&quot;url&quot;:&quot;/@(item.FullImagePath)_800x800.webp&quot;,&quot;width&quot;:1600},{&quot;url&quot;:&quot;/@(item.FullImagePath)_800x800.webp&quot;,&quot;width&quot;:1920}]" alt="Kansas City Public Schools homepage displayed in laptop" /></div>
+
+                                                    <div class="fsTitle" id="fsArticle_122920_13246@(item.ID)">
+                                                        @item.Name
+
+                                                    </div>
+                                                    <div class="fsSummary">
+                                                        <p>@item.ExtraInfo</p>
+
+                                                    </div>
+
+                                                    <div class="fsBody">
+                                                        <p>
+                                                            @Html.Raw(@item.Description)
+                                                        </p>
+
+
+                                                        @*image 1*@
+                                                        <figure class="fsImage"><picture><img alt="" class="inset" @*data-image-sizes="[{%22url%22:%22/@(item.FullImagePath)_450x450.jpg%22,%22width%22:256},{%22url%22:%22/@(item.FullImagePath)_450x450.jpg%22,%22width%22:512},{%22url%22:%22/@(item.FullImagePath)_450x450.jpg%22,%22width%22:800},{%22url%22:%22/@(item.FullImagePath)_450x450.jpg%22,%22width%22:1200},{%22url%22:%22/@(item.FullImagePath)_450x450.jpg%22,%22width%22:1600},{%22url%22:%22/@(item.FullImagePath)_450x450.jpg%22,%22width%22:1920}]" data-resource-description="" data-resource-filename="Kansas-City-Public-Schools-Inset-Image.png" data-resource-uuid="db660293-83d8-44a1-ae17-6001348a180f" id="" src="#"*@ /></picture></figure>
+
+                                                        <p>&nbsp;</p>
+
+                                                    </div>
+                                                    <a class="fsPostLink fsReadMoreLink" data-slug="b/post/new-school-communicators-guide-to-new-job" data-opens-in="page" data-page-id="7256" href="@(ViewBag.Theme == "ar"? "/ar":"/en")/home/NewsDetails/@(item.SEOPath)" aria-hidden="true" tabindex="-1">
+                                                        @Localizer["MoreRead"]
+
+                                                    </a>
+
+
+                                                </article>
+
+                                            }
+                                        }
+
+
+
+
+
+
+
+                                    </div>
+                                    <button class="fsPrevButton fsLeftArrow">&lt;</button>
+                                    <button class="fsNextButton fsRightArrow">&gt;</button>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                @*
+                <div class="fsElement fsContent" id="fsEl_127866" data-use-new="true">
+
+                <div class="fsElementContent learn-more-container">
+                <h3 style="text-align: center;">@Localizer["TheNewsMore"]</h3>
+
+                <p style="text-align: center;"><a class="fs_style_102" href="/Home/News">@Localizer["TheMore"]</a></p>
+
+
+                </div>
+
+
+                </div>
+
+                *@
+
+
+            </main>
+        </div>
+    </div>
+</div>
+<div class="circle"></div>
+
+@section scripts
+    {
+
+    <script>
+        // Selector
+        const counters = document.querySelectorAll('.counter');
+        // Main function
+        for (let n of counters) {
+            const updateCount = () => {
+
+                const target = + n.getAttribute('data-target');
+                const count = + n.innerText;
+                const speed = 5000; // change animation speed here
+                const inc = target / speed;
+                if (count < target) {
+                    n.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 1);
+                } else {
+                    n.innerText = target;
+                }
+            }
+            updateCount();
+        }
+
+
+
+
+
+    </script>
+
+
+}

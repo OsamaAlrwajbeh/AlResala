@@ -1,0 +1,383 @@
+
+.fs_style_71, stylename_-18__blockquote {visibility: visible;}
+
+.fs_style_76, stylename_-18__button__blue {visibility: visible;}
+
+.fs_style_78, stylename_-18__button__green {visibility: visible;}
+
+.fs_style_80, stylename_-18__button__LARGER {visibility: visible;}
+
+.fs_style_77, stylename_-18__button__lightblue {visibility: visible;}
+
+.fs_style_84, stylename_-18__button__lime {visibility: visible;}
+
+.fs_style_75, stylename_-18__button__pink {visibility: visible;}
+
+.fs_style_79, stylename_-18__button__white {visibility: visible;}
+
+.fs_style_72, stylename_-18__citation {visibility: visible;}
+
+.fs_style_70, stylename_-18__lead-in__text {font-weight: 300;}
+
+.fs_style_81, stylename_-18__pink__text__bold__13px {color: #bd4a99;
+font-size: 13px;
+font-weight: 700;}
+
+.fs_style_74, stylename_-18__portfolio__image {visibility: visible;}
+
+.fs_style_73, stylename_-18__portfolio__link {visibility: visible;}
+
+.fs_style_82, stylename_-18__Post__Page__Hide__Img {/* -18 Post Page Hide Img */}
+
+.fs_style_83, stylename_-18__Post__Page__Main__Img {/* -18 Post Page Main Img */}
+
+.fs_style_85, stylename_-18__table__styled {/* table styled */}
+
+.fs_style_28, stylename___13____50__50__2-column__table {width:100%; margin:0; padding:0 !important;
+/* additional css for this in theme_13/main.css */}
+
+.fs_style_35, stylename___13____Bulleted__List {/* Apply to UL for styled bullets */
+margin-left:1.5em;}
+
+.fs_style_31, stylename___13____button__blue {display: inline-block;
+color: #fff;
+text-decoration: none;
+background: #149bc8;
+padding: 0.75em 1.25em;
+border-radius: 5px;
+margin-top: 1.75em;}
+
+.fs_style_27, stylename___13____huge__heading____blog__ {position:relative;
+color: #282828;
+font-size: 6.75em;
+margin:50px 0 2px;
+text-transform:none;
+text-align: center;
+border-bottom: 5px solid #eee;
+padding-bottom: 40px;}
+
+.fs_style_26, stylename___13____Image__align__left {float:left;
+margin-right: 2.128%; /* 20px */
+margin-bottom: 3rem;}
+
+.fs_style_33, stylename___13____Image__border {padding: 2px;
+background: #f0f0f0;
+border: 1px solid #e2e2e2;}
+
+.fs_style_21, stylename___13____lede {font-size:2.25em;
+font-family:'aller_lightregular';
+color:#3a3a3a;
+line-height: 1.25;
+margin-bottom: 0.4em;
+font-weight:normal;}
+
+.fs_style_30, stylename___13____lede_small {font-size:1.25em;
+font-family:'aller_lightregular';
+color:#3a3a3a;
+line-height: 1.25;
+margin:0 5% 0.4em;
+font-weight:normal;}
+
+.fs_style_36, stylename___13____Lede_small_NoMargin {font-size:1.25em;
+font-family:'aller_lightregular';
+color:#3a3a3a;
+line-height: 1.25;
+font-weight:normal;}
+
+.fs_style_38, stylename___13____List__to__3__column__grid {overflow:hidden;
+/* Apply to <ul> to transform items to grid layout */}
+
+.fs_style_32, stylename___13____List__to__gray__content__blocks {/* Apply to <ul> list to make grid of content blocks with a background color
+Additional styles in theme_13/main.css
+*/
+overflow:hidden;}
+
+.fs_style_29, stylename___13____List__to__Grid {overflow:hidden;
+/* Apply to <ul> to transform items to grid layout
+Additional css in theme_13/main.css
+ */}
+
+.fs_style_19, stylename___13____quote {font-style: italic;
+font-family: 'Vollkorn';
+font-size: 1.125em;
+position:relative;}
+
+.fs_style_34, stylename___13____read__more {color: #7B7A7A;}
+
+.fs_style_18, stylename___13____section__button {display: inline-block;
+color: #fff;
+text-decoration: none;
+background: #cc00e2;
+padding: 0.75em 1.25em;
+border-radius: 5px;
+margin-top: 1.75em;}
+
+.fs_style_20, stylename___13____small__text {font-size:0.8125em;}
+
+.fs_style_39, stylename___13____StyleGuide {
+color: #ffffff;
+font-size: 4em;
+margin:50px 0 2px 0;
+text-transform:none;
+text-align: center;
+padding-bottom: 10px;
+}
+
+.fs_style_37, stylename___13__lede_medium {font-size:1.75em;
+font-family:'aller_lightregular';
+color:#3a3a3a;
+line-height: 1.25;
+font-weight:normal;}
+
+.fs_style_47, stylename___14____Open__Sans__Light__LG {font-size:2em;
+font-weight:300;
+line-height: 1.3;
+color:#7f7f7f;}
+
+.fs_style_42, stylename___14____platform {font-size:1.3em;
+font-family:'aller';
+color:#3a3a3a;
+line-height: 1.25;
+font-weight:normal;
+text-transform:uppercase;}
+
+.fs_style_43, stylename___14____platform__txt {font-family: 'Open Sans', sans-serif;
+color: #7f7f7f;
+font-size: 1.0em;
+line-height: 1.5em;
+
+}
+
+.fs_style_44, stylename___14____sandbox {color: #eda62c;}
+
+.fs_style_111, stylename_1__1__Lists {  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;    
+}
+
+.fs_style_49, stylename_2015__-__Lead-In {color: gray;}
+
+.fs_style_48, stylename_2015__Intro__Subhead {font-style: italic;}
+
+.fs_style_15, stylename_blog__Heading {font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #e8a5d5;
+line-height:0%;}
+
+.fs_style_16, stylename_Blog__Heading__2 {font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: #88add1;
+line-height:50%;}
+
+.fs_style_45, stylename_blog-callout {font-size:1.25em;
+font-family:'aller_lightregular';
+color:#48c0b9;
+line-height: 1.25;
+margin:0 5% 0.4em;
+font-weight:normal;}
+
+.fs_style_46, stylename_blogcallout {font-size:1.25em;
+font-family:'aller_lightregular';
+color:#d91670;
+line-height: 1.25;
+margin:0 5% 0.4em;
+font-weight:normal;}
+
+.fs_style_52, stylename_Composer__Pink {background-color: #C83ea8;
+color: #FFFFFF;
+border: 2px solid white;
+}
+
+.fs_style_41, stylename_dark_purple {color: #460056;}
+
+.fs_style_50, stylename_deploymentanchor {display: block; 
+height: 70px; 
+margin-top: -70px;
+visibility: hidden;}
+
+.fs_style_67, stylename_DR__-__blockquote__cite {}
+
+.fs_style_68, stylename_DR__-__button__-__icon__button {}
+
+.fs_style_57, stylename_DR__-__button__-__large__-__blue {}
+
+.fs_style_59, stylename_DR__-__button__-__large__-__blue__border {}
+
+.fs_style_56, stylename_DR__-__button__-__large__-__pink {}
+
+.fs_style_58, stylename_DR__-__button__-__large__-__pink__border {}
+
+.fs_style_61, stylename_DR__-__button__-__small__-__blue {}
+
+.fs_style_63, stylename_DR__-__button__-__small__-__blue__border {}
+
+.fs_style_60, stylename_DR__-__button__-__small__-__pink {}
+
+.fs_style_62, stylename_DR__-__button__-__small__-__pink__border {}
+
+.fs_style_66, stylename_DR__-__Glossary__term {}
+
+.fs_style_65, stylename_DR__-__keep__in__mind {}
+
+.fs_style_64, stylename_DR__-__lead__in {}
+
+.fs_style_69, stylename_DR__-__styled__table {}
+
+.fs_style_8, stylename_Editors__Note {font-family: Vernanda, Helvetica, sans-serif;
+	font-size: 11px;
+color: #8c8b8b;
+line-height:140%;}
+
+.fs_style_13, stylename_enotify__Dark__Blue__Text {font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+color: #0d3d65;
+}
+
+.fs_style_2, stylename_enotify__Heading__1 {font-family: Arial black, Helvetica, sans-serif;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: bold;
+	color: #0d2c50;
+line-height:110%;
+margin-bottom: 10px;}
+
+.fs_style_3, stylename_enotify__Heading__2 {font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #88add1;
+line-height:100%;}
+
+.fs_style_14, stylename_Enotify__sm__txt__link__-__blue__bkg {font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+color: #9cc2e8; 
+text-decoration:none;}
+
+.fs_style_4, stylename_enotify__Text {font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+color: #555656;
+line-height:140%;
+}
+
+.fs_style_7, stylename_enotify__Text__white {font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+color: #ffffff;
+}
+
+.fs_style_12, stylename_enotify__Text__White__small {font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+color: #ffffff;
+text-decoration:none;}
+
+.fs_style_5, stylename_enotify__Textsm {font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+text-decoration:none;}
+
+.fs_style_6, stylename_finalsite__minute__bg {width: 100%; background-image: url('uploaded/images3/enotify/bkgEmail.png'); background-color: #ffffff;}
+
+.fs_style_55, stylename_Learn__More__Bouncing__Arrow {}
+
+.fs_style_17, stylename_portlet__footer {position: absolute;
+background-color:#0084ec;
+display: block;
+width: 100%;
+left: 0;
+bottom: 0;
+border-radius: 2px 2px 16px 16px;
+color: #fff;
+text-decoration: none;
+text-align: right;
+height: 31px;
+padding-top: 10px;
+margin:0;}
+
+.fs_style_9, stylename_Recent__Launch__Heading__1 {font-family: Arial black, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	color: #3e3e3d;
+line-height:100%;}
+
+.fs_style_10, stylename_Recent__Launch__Heading__2 {font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #416c95;
+line-height:100%;}
+
+.fs_style_11, stylename_Recent__Launch__Text {font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+color: #555656;
+line-height:140%;
+text-decoration:none;}
+
+.fs_style_54, stylename_Release__Notes {text-align: left;}
+
+.fs_style_1, stylename_sig {font-family: "caflisch-script-pro-1","caflisch-script-pro-2", sans-serif;
+font-size:2em;
+line-height:1em;
+color:#102441;}
+
+.fs_style_40, stylename_Styleguide__Lede_small_NoMargin {font-size:1.25em;
+font-family:'aller_lightregular';
+color:#3a3a3a;
+line-height: 1.25;
+font-weight:normal;
+margin-top: -14px;}
+
+.fs_style_51, stylename_Text__Box {border: 1px solid #ebebeb;
+padding: 2em;}
+
+.fs_style_53, stylename_theme_smalltext {font-size: .85em;}
+
+.fs_style_101, stylename_y__-__2021__Redesign__-__Button__Dark {/* Button Dark */}
+
+.fs_style_105, stylename_y__-__2021__Redesign__-__Button__Expand {/* Button Expand */}
+
+.fs_style_99, stylename_y__-__2021__Redesign__-__Button__Gray____Default__ {/* Button Gray (Default) */}
+
+.fs_style_100, stylename_y__-__2021__Redesign__-__Button__Hollow {/* Button Hollow */}
+
+.fs_style_103, stylename_y__-__2021__Redesign__-__Button__Hollow__on__Dark__Background {/* Button Hollow on Dark Background */}
+
+.fs_style_104, stylename_y__-__2021__Redesign__-__Button__Large {/* Button Large */}
+
+.fs_style_102, stylename_y__-__2021__Redesign__-__Button__Red {/* Button Red */}
+
+.fs_style_107, stylename_y__-__2021__Redesign__-__Button__White {/* Button White */}
+
+.fs_style_97, stylename_y__-__2021__Redesign__-__Callout {/* Callout */}
+
+.fs_style_110, stylename_y__-__2021__Redesign__-__Callout__Small {/* Callout Small */}
+
+.fs_style_109, stylename_y__-__2021__Redesign__-__Grapefruit__Color {/* Grapefruit Color */}
+
+.fs_style_108, stylename_y__-__2021__Redesign__-__H1__Text {/* H1 Text */}
+
+.fs_style_96, stylename_y__-__2021__Redesign__-__Lead-in {/* Lead-in */}
+
+.fs_style_106, stylename_y__-__2021__Redesign__-__Read__More__Link {/* Read More Link */}
+
+.fs_style_98, stylename_y__-__2021__Redesign__-__Table__Styled {/* Table Styled */}
+
+.fs_style_86, stylename_z__-__dc-button-cta {/* dc-button-cta */}
+
+.fs_style_87, stylename_z__-__dc-button-download {/* dc-button-download */}
+
+.fs_style_88, stylename_z__-__dc-button-expand {/* dc-button-expand */}
+
+.fs_style_89, stylename_z__-__dc-button-large {/* dc-button-large */}
+
+.fs_style_90, stylename_z__-__dc-button-link {/* dc-button-link */}
+
+.fs_style_91, stylename_z__-__dc-default-button {/* dc-default-button */}
+
+.fs_style_92, stylename_z__-__dc-lead-in {/* dc-lead-in */}
+
+.fs_style_93, stylename_z__-__dc-sub-title {/* dc-sub-title */}
+
+.fs_style_94, stylename_z__-__dc-table-style {/* dc-table-style */}
+
+.fs_style_95, stylename_z__-__dc-text-callout {/* dc-text-callout */}
+
+

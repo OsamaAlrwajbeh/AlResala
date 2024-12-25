@@ -1,0 +1,278 @@
+﻿@using CMS;
+@model List<CMS.StaticPage>
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@inject IHtmlLocalizer<SharedResource> Localizer
+@{
+    if (Model.Find(x => x.ID == 30047).Label != null)
+    {
+        ViewBag.lblTel = Model.Find(x => x.ID == 30047).Label;
+
+    }
+    if (Model.Find(x => x.ID == 30047).Name != null)
+    {
+        ViewBag.nameTel = Model.Find(x => x.ID == 30047).Name;
+
+    }
+
+
+    if (Model.Find(x => x.ID == 30028).Label != null)
+    {
+        ViewBag.lblMobile = Model.Find(x => x.ID == 30028).Label;
+
+    }
+    if (Model.Find(x => x.ID == 30028).Name != null)
+    {
+        ViewBag.nameMobile = Model.Find(x => x.ID == 30028).Name;
+
+    }
+
+    if (Model.Find(x => x.ID == 30027).Label != null)
+    {
+        ViewBag.lblAdress = Model.Find(x => x.ID == 30027).Label;
+
+    }
+    if (Model.Find(x => x.ID == 30027).Name != null)
+    {
+        ViewBag.nameAdress = Model.Find(x => x.ID == 30027).Name;
+
+    }
+
+    if (Model.Find(x => x.ID == 30029).Label != null)
+    {
+        ViewBag.lblEmail = Model.Find(x => x.ID == 30029).Label;
+
+    }
+    if (Model.Find(x => x.ID == 30029).Name != null)
+    {
+        ViewBag.nameEmail = Model.Find(x => x.ID == 30029).Name;
+
+    }
+
+
+
+
+
+
+
+    ViewData["Title"] = "ContactUs";
+    }
+
+
+
+<script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+
+<div class="fsElement fsContainer panel-full-width panel-full-boundary panel-padding-thick" id="fsEl_130871" data-use-new="true">
+
+    <div class="fsElementContent">
+        <div class="fsElement fsContent" id="fsEl_130881" data-use-new="true">
+
+            <div class="fsElementContent">
+                @*بإمكانكم التواصل معنا عبر إحدى قنوات التواصل او عبر تعبئة النموذج*@
+                <h2 style="text-align: center;">@Localizer["TitleContactUs"]</h2>
+            </div>
+
+
+        </div>
+        <div class="fsElement fsLayout fsTwoColumnLayout fsStyleAutoclear" id="fsEl_130872" data-use-new="true">
+
+            <div class=" fsDiv fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_130873">
+
+                <div class="fsElement fsContent" id="fsEl_130874" data-use-new="true" top-image-only="" updated="">
+
+
+                    
+
+                    
+                    <div class="fsElementContent">
+                        @*<h3>Ready to take a closer look?</h3>*@
+
+                        <p>
+                            <ul class="contact-us-text" dir="ltr">
+                                <li>
+                                    @ViewBag.lblTel :
+                                    <span dir="ltr">
+                                        @ViewBag.nameTel
+                                    </span>
+                                </li>
+                                <li>
+                                    @ViewBag.lblMobile :
+                                    <span dir="ltr">
+                                        @ViewBag.nameMobile
+                                    </span>
+                                </li>
+
+                                <li>
+                                    @ViewBag.lblAdress :
+                                    @ViewBag.nameAdress
+                                </li>  
+                               <li>
+                                    @ViewBag.lblEmail:
+                                    <a href="mailto:alresalah.schools@gmail.com">
+                                        @ViewBag.nameEmail:
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </p>
+
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13537.232158937197!2d35.885543!3d31.979664!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2e23c7b11f0f1fd6!2sAl%20Resalah%20School!5e0!3m2!1sar!2sjo!4v1665575389714!5m2!1sar!2sjo" 
+                            width="800" 
+                            height="390" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+            <div class=" fsDiv fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear" id="fsEl_130875">
+
+                <section class="fsElement fsContent card-1" id="fsEl_130880" data-use-new="true" aria-label="Request a demo">
+
+                    <div class="fsElementContent">
+                        <div class="fsCallout" style="float:right;"></div>
+
+                        <form method="post">
+                            @*  <h1 class="title text-center mb-4 title-purple">نموذج التواصل</h1>   *@
+                          
+                            <h1 class="title text-center mb-4 title-purple">@Localizer["ContactForm"]</h1>
+
+                            <!-- Name -->
+                            <div class="form-group position-relative input-purple-container ">
+                                <label for="formName" class="d-block">
+                                    <i class="icon" data-feather="user"></i>
+                                </label>
+                                <input type="text" id="FullName" name="FullName" class="form-control form-control-lg thick col-md-6 input-purple" placeholder="@Localizer["FullName"]" required>
+                            </div>
+
+                            <!-- E-mail -->
+                            <div class="form-group position-relative input-purple-container ">
+                                <label for="formEmail" class="d-block">
+                                    <i class="icon" data-feather="mail"></i>
+                                </label>
+                                <input type="email" id="Email" name="Email" class="form-control form-control-lg thick input-purple" placeholder="@Localizer["Email"]" required >
+                                <span class="alert-error"></span>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="form-group message input-purple-container ">
+                                <textarea id="Description" name="Description" class="form-control form-control-lg input-purple" rows="7" placeholder="@Localizer["Message"]" required></textarea>
+                            </div>
+
+                            <!-- Submit btn -->
+                            <div class="text-center input-purple-container ">
+                                <button id="send" type="submit" class="btn submit-purple" tabIndex="-1">@Localizer["Submit"]</button>
+                            </div>
+                            <!-- Alert Message -->
+                            <div class="col-md-12 alert-notification">
+                                <div id="message" class="alert-msg"></div>
+                            </div>
+                        </form>
+
+                    </div>
+                </section>
+
+
+
+
+            </div>
+
+
+
+            <footer>
+                <div class="fsElementFooterContent">
+                    <p><a id="demo" name="demo"></a></p>
+
+                </div>
+            </footer>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+@section scripts{
+<script>
+    document.getElementById('send').addEventListener('click', (e) => {
+        e.preventDefault();
+        ContactUs();
+    })
+
+     
+    function ContactUs() {
+        
+        var FullName = $("#FullName").val().trim();
+        var Email = $("#Email").val().trim();
+        var Description = $("#Description").val().trim();
+       
+        
+
+            if (FullName == "" || Email == "" || Description == "") 
+            {
+                swal(
+                    'error  !',
+                    'Something Went Wrong,',
+                    'fill text'
+                )
+            
+            }
+            
+
+            else {
+            let data = { FullName: FullName, Email: Email, Description: Description }
+           
+                $('#send')
+                    .after('<img  src="" class="loader" />')
+                .attr('disabled', 'disabled');
+            $('#send').removeAttr('disabled');
+            $.ajax({
+                type: "POST",
+                url: "/Home/ContactUs",
+                data: (data),
+                dataType: "json",
+                success: function (data) {
+                   
+                     $('.contact-form img.loader').fadeOut('slow', function () {
+                $(this).remove()
+            });
+                    $('#send').removeAttr('disabled');
+                    swal(
+                            data.Done,
+                            data.Message,
+                            data.Success, ); },
+                error:
+                    function (err, msg) {
+                        swal(
+                            'Ops !',
+                            'Something Went Wrong, Please Try Again Later',
+                            'error'
+                        )
+                    }
+            });
+        }
+    }
+</script>
+}
+
+

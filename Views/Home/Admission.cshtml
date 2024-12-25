@@ -1,0 +1,554 @@
+﻿@using CMS;
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@inject IHtmlLocalizer<SharedResource> Localizer
+@{
+
+
+
+    List<Article> Admissions = new List<Article>();
+
+    if (ViewBag.Admissions != null)
+    {
+        Admissions = ViewBag.Admissions;
+    }
+
+
+
+
+
+
+    ArticleType articleType = new ArticleType();
+
+    if (ViewBag.TitleAdmissions != null)
+    {
+        articleType = ViewBag.TitleAdmissions;
+    }
+
+
+
+
+    var counter = 1;
+    ViewData["Title"] = "Admission";
+}
+
+
+<div id="fsPageWrapper pt-20">
+
+
+
+
+
+    <header id="fsHeader" class="fsHeader">
+        <div id="modal" class="modal">
+            <span id="modal-close" class="modal-close">×</span>
+            <img id="modal-content" class="modal-content">
+            <div id="modal-caption" class="modal-caption"></div>
+        </div>
+
+
+        <div class=" fsBanner fsStyleAutoclear" id="fsEl_105048" data-settings-id="104258" data-use-new="true">
+
+            <div class="fsElement fsContainer hero-combo hero-offset hero-green-grey hero-texture" style="    min-height: 50vh;
+    background-position: center top;
+background-image:url('/@(articleType.FullImagePath)_1920x1080.webp')" id="fsEl_117208" data-use-new="true" has-breadcrumbs="" has-content="" columns="" resource="" updated="">
+
+                <div class="fsElementContent" >
+                    <div class="fsElement fsNavigation fsBreadcrumb" id="fsEl_117209" data-use-new="true">
+
+                        <div class="fsElementContent">
+                            <nav aria-label="breadcrumbs">
+                                <ul>
+                                    <li aria-current="location">
+                                        <a href="@(ViewBag.Theme == "ar"? "/ar":"/en")/Home/Index">@Localizer["Home"]</a> <span aria-hidden="true" class="fsNavBreadcrumbSeperator">&gt;</span>
+                                    </li>
+                                    <li>
+                                        @Localizer["Admission"]
+                                    </li>
+                                    @*                                                    <li>
+                                    <a href="../school-websites.html">School Websites</a> <span aria-hidden="true" class="fsNavBreadcrumbSeperator">&gt;</span>
+                                    </li>*@
+
+
+                                </ul>
+                            </nav>
+
+                        </div>
+
+
+                    </div>
+                    <div class="fsElement fsLayout fsTwoColumnLayout fsStyleAutoclear" id="fsEl_117210" data-use-new="true">
+
+                        <div class=" fsDiv fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_117211">
+
+                            <div class="fsElement fsContent" id="fsEl_117212" data-use-new="true">
+
+                                <div class="fsElementContent">
+                                    <h1>@articleType.Name</h1>
+                                    <span class="fs_style_96">@Localizer["AdmissionInfo"]</span>
+
+                                </div>
+                                @*
+                                <footer>
+                                    <div class="fsElementFooterContent">
+                                        <p><a class="fs_style_104 fs_style_101" href="#admission">@Localizer["TheMore"]</a></p>
+
+                                    </div>
+                                </footer>
+
+                                *@
+                            </div>
+
+
+
+
+                        </div>
+                        <div class=" fsDiv fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear" id="fsEl_117213">
+
+                            <div class="fsElement fsResourceElement fsSingleItem resource-shadow" id="fsEl_117214" data-use-new="true" data-source-element-id="117214" data-source-page-id="6977">
+
+                                <div class="fsElementContent">
+                                    <article class="fsResource fsResourceTypeImage d-none" style="display:none"><figure><picture><img alt="Image Admission" data-aspect-ratio="0.6432291666666666" style="" src="/@(articleType.FullImagePath)_800x500.webp"></picture></figure></article>
+                                </div>
+
+
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </header>
+
+    <div id="fsPageBodyWrapper" class="fsPageBodyWrapper">
+        <div id="fsPageBody" class="fsStyleAutoclear fsPageBody j-content-c">
+
+            <main id="fsPageContent" class="fsPageContent max-width-1450" style="outline:none;">
+
+                <div id="fsPageWrapper">
+                    <div class="fsElement fsLayout fsTwoColumnWideLeftLayout fsStyleAutoclear mb-70px" id="fsEl_130410" data-use-new="true">
+
+                        <div class=" fsDiv fsStyleTwoThirds fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_130411">
+
+                            <div class="fsElement fsContent top-caption" id="fsEl_130414" data-use-new="true">
+
+                                <div class="fsElementContent">
+                                    <h1>@articleType.Name</h1>
+
+                                        <span class="fs_style_96">
+                                            @Html.Raw(articleType.Description)
+                                        </span>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+
+                        </div>
+                        <div class=" fsDiv fsStyleOneThird fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear" id="fsEl_130412">
+
+@*                            <section class="fsElement fsNavigation fsList nav-sub" id="fsEl_130413" data-use-new="true" aria-label="OUR COMPANY" updated="">
+
+                                <header>
+                                    <h2 class="fsElementTitle">OUR COMPANY</h2>
+                                </header>
+                                <div class="fsElementContent">
+                                    <nav><ul class="fsNavLevel1"><li><a href="about.html"><span><span>About Us</span></span></a></li><li><a href="jobs.html"><span><span>Jobs at 
+
+
+                                    </span></span></a></li><li><a href="meet-the-team.html"><span><span>Meet the Team</span></span></a></li><li><a href="meet-our-schools.html"><span><span>Meet Our Schools</span></span></a></li><li><a href="support-client-success.html"><span><span>Support and Client Success</span></span></a></li><li class="fsNavCurrentPage"><a href="partner-network.html"><span><span>Partner Network</span></span></a></li><li><a href="contact.html"><span><span>Contact Us</span></span></a></li></ul></nav>
+                                </div>
+
+
+                            </section>*@
+
+
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+
+
+                
+
+
+            </main>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+<div class="fsElement fsContainer panel-full-width panel-green m-0" id="fsEl_129720" data-use-new="true">
+    
+    <div class="fsElementContent">
+        
+           @foreach (Article item in Admissions)
+        {   
+            @if(counter %2 == 0)
+            {
+                <div class="fsElement fsLayout fsTwoColumnLayout resource-duo-left resource-duo-padded fsStyleAutoclear" id="fsEl_129721" data-use-new="true" style="    flex-direction: row-reverse;">
+
+                    <div class=" fsDiv fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_129722">
+
+                        <div class="fsElement fsResourceElement fsSingleItem resource-shadow" id="fsEl_129723" data-use-new="true" data-source-element-id="129723" data-source-page-id="7183">
+
+                            <div class="fsElementContent">
+                                <article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Image Admission " data-aspect-ratio="0.8" style="" src="/@(item.FullImagePath)_500x500.webp"></picture></figure></article>
+                                @*                            <article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Not Found " data-aspect-ratio="0.8" style="" src="../assets/img/1.jpg"></picture></figure></article>
+                        *@
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" fsDiv fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear" id="fsEl_129724">
+
+
+                        <section class="fsElement fsContent" id="fsEl_129725" data-use-new="true" aria-label="Our people">
+
+                            <header>
+                                <h2 id="admission" class="fsElementTitle">@item.Name</h2>
+                                <div class="fsElementHeaderContent">
+                                    <h4>@item.ExtraInfo</h4>
+
+                                </div>
+                            </header>
+                            <div class="fsElementContent">
+                                <p>
+                                    @Html.Raw(item.Description)
+                                </p>
+
+
+
+                            </div>
+                            <footer>
+                                <div class="fsElementFooterContent">
+                                    <p><a class="fs_style_99" data-page-name="Careers" href="@(ViewBag.Theme == "ar"? "/ar":"/en")/Home/AdmissionPage/@item.SEOPath">@Localizer["MoreDetails"]</a></p>
+
+                                </div>
+                            </footer>
+
+
+                        </section>
+
+
+
+
+                    </div>
+
+
+                </div>
+            }
+          else{  <div class="fsElement fsLayout fsTwoColumnLayout resource-duo-left resource-duo-padded fsStyleAutoclear" id="fsEl_129721" data-use-new="true">
+     
+                <div class=" fsDiv fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_129722">
+
+                    <div class="fsElement fsResourceElement fsSingleItem resource-shadow" id="fsEl_129723" data-use-new="true" data-source-element-id="129723" data-source-page-id="7183">
+
+                        <div class="fsElementContent">
+                            <article class="fsResource fsResourceTypeImage"><figure><picture><img alt="" data-aspect-ratio="0.8" style="" src="/@(item.FullImagePath)_600x600.webp"></picture></figure></article>
+                            @*                            <article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Not Found " data-aspect-ratio="0.8" style="" src="../assets/img/1.jpg"></picture></figure></article>
+                        *@
+                        </div>
+                    </div>
+                </div>
+
+            <div class=" fsDiv fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear" id="fsEl_129724">
+                    
+
+                <section class="fsElement fsContent" id="fsEl_129725"  data-use-new="true" aria-label="Our people">
+
+                    <header>
+                        <h2 id="admission" class="fsElementTitle">@item.Name</h2>
+                        <div class="fsElementHeaderContent">
+                            <h4>@item.ExtraInfo</h4>
+
+                        </div>
+                    </header>
+                    <div class="fsElementContent">
+                        <p>
+                            @Html.Raw(item.Description)
+                        </p>
+
+
+
+                    </div>
+                    <footer>
+                        <div class="fsElementFooterContent">
+                                    <p><a class="fs_style_99" data-page-name="Careers" href="@(ViewBag.Theme == "ar"? "/ar":"/en")/Home/AdmissionPage/@item.SEOPath">@Localizer["MoreDetails"]</a></p>
+
+                        </div>
+                    </footer>
+
+
+                </section>
+
+                
+
+
+                </div>
+
+
+                </div>
+            }
+            counter++;
+        }
+
+        
+
+
+        
+    </div>
+    
+
+</div>
+
+@*
+<div class="fsElement fsContainer panel-full-width panel-green" id="fsEl_129720" data-use-new="true">
+
+    <div class="fsElementContent">
+        <div class="fsElement fsLayout fsTwoColumnLayout resource-duo-left resource-duo-padded fsStyleAutoclear" id="fsEl_129721" data-use-new="true">
+
+            <div class=" fsDiv fsStyleColumn fsStyleColumn-1 fsStyleAutoclear  bg-white" id="fsEl_129722">
+
+                <div class="fsElement fsResourceElement fsSingleItem resource-shadow" id="fsEl_129723" data-use-new="true" data-source-element-id="129723" data-source-page-id="7183">
+
+                    <div class="fsElementContent">
+                        <article class="fsResource fsResourceTypeImage"><figure><picture><img alt="" data-aspect-ratio="0.8"  style="" src="../assets/img/bg2.jpg"></picture></figure></article>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+            <div class=" fsDiv fsStyleColumn fsStyleColumn-1 fsStyleColumn-last fsStyleAutoclear bg-white" id="fsEl_129724">
+
+                <section class="fsElement fsContent" id="fsEl_129725" dir="rtl" data-use-new="true" aria-label="Our people">
+
+                    <header>
+                        <h2 class="fsElementTitle">الرسوم الدراسية</h2>
+                        <div class="fsElementHeaderContent">
+                            <h4>لوريم ايبسوم دولار سيت أميت.</h4>
+
+                        </div>
+                    </header>
+                    <div class="fsElementContent">
+                        <p>
+                            لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور
+
+                            أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
+
+                            أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات.
+                        </p>
+
+
+
+                    </div>
+                    <footer>
+                        <div class="fsElementFooterContent">
+                            <p><a class="fs_style_99" data-page-name="Careers" href="/Home/AdmissionPage">تفاصيل أكثر</a></p>
+
+                        </div>
+                    </footer>
+
+
+                </section>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+<div class="fsElement fsContainer panel-full-width panel-green" id="fsEl_129720" data-use-new="true">
+
+    <div class="fsElementContent">
+        <div class="fsElement fsLayout fsTwoColumnLayout resource-duo-left resource-duo-padded fsStyleAutoclear" id="fsEl_129721" data-use-new="true">
+
+            <div class=" fsDiv fsStyleColumn fsStyleColumn-2 fsStyleAutoclear" id="fsEl_129722">
+
+                <div class="fsElement fsResourceElement fsSingleItem resource-shadow" id="fsEl_129723" data-use-new="true" data-source-element-id="129723" data-source-page-id="7183">
+
+                    <div class="fsElementContent">
+                        <article class="fsResource fsResourceTypeImage"><figure><picture><img alt="" data-aspect-ratio="0.8" style="" src="../assets/img/school/image00022.jpeg"></picture></figure></article>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+            <div class=" fsDiv fsStyleColumn fsStyleColumn-1 fsStyleColumn-last fsStyleAutoclear" id="fsEl_129724">
+
+                <section class="fsElement fsContent" id="fsEl_129725" dir="rtl" data-use-new="true" aria-label="Our people">
+
+                    <header>
+                        <h2 class="fsElementTitle">سياسات الخصومات والمنح</h2>
+                        <div class="fsElementHeaderContent">
+                            <h4>لوريم ايبسوم دولار سيت أميت.</h4>
+
+                        </div>
+                    </header>
+                    <div class="fsElementContent">
+                        <p>
+                            لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور
+
+                            أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
+
+                            أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات.
+                        </p>
+
+
+
+                    </div>
+                    <footer>
+                        <div class="fsElementFooterContent">
+                            <p><a class="fs_style_99" data-page-name="Careers" href="/Home/AdmissionPage">تفاصيل أكثر</a></p>
+
+                        </div>
+                    </footer>
+
+
+                </section>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+<div class="fsElement fsContainer panel-full-width panel-green" id="fsEl_129720" data-use-new="true">
+
+    <div class="fsElementContent">
+        <div class="fsElement fsLayout fsTwoColumnLayout resource-duo-left resource-duo-padded fsStyleAutoclear" id="fsEl_129721" data-use-new="true">
+
+            <div class=" fsDiv fsStyleColumn fsStyleColumn-2 fsStyleAutoclear" id="fsEl_129722">
+
+                <div class="fsElement fsResourceElement fsSingleItem resource-shadow" id="fsEl_129723" data-use-new="true" data-source-element-id="129723" data-source-page-id="7183">
+
+                    <div class="fsElementContent">
+                        <article class="fsResource fsResourceTypeImage"><figure><picture><img alt="" data-aspect-ratio="0.8" style="" src="../assets/img/school/image00007.jpeg"></picture></figure></article>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+            <div class=" fsDiv fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear" id="fsEl_129724">
+
+                <section class="fsElement fsContent" id="fsEl_129725" dir="rtl" data-use-new="true" aria-label="Our people">
+
+                    <header>
+                        <h2 class="fsElementTitle">رسوم المواصلات</h2>
+                        <div class="fsElementHeaderContent">
+                            <h4>لوريم ايبسوم دولار سيت أميت.</h4>
+
+                        </div>
+                    </header>
+                    <div class="fsElementContent">
+                        <p>
+                            لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور
+
+                            أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
+
+                            أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات.
+                        </p>
+
+
+
+                    </div>
+                    <footer>
+                        <div class="fsElementFooterContent">
+                            <p><a class="fs_style_99" data-page-name="Careers" href="/Home/AdmissionPage">تفاصيل أكثر</a></p>
+
+                        </div>
+                    </footer>
+
+
+                </section>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+*@

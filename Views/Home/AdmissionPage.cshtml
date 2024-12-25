@@ -1,0 +1,133 @@
+﻿@using CMS;
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@inject IHtmlLocalizer<SharedResource> Localizer
+
+
+
+
+@{
+
+
+    Article subArticle = new Article();
+   
+
+    if (ViewBag.subArticle != null)
+    {
+        subArticle = ViewBag.subArticle;
+    }
+
+
+
+    ViewData["Title"] = "AdmissionPage";
+}
+
+<div id="fsPageWrapper" >
+<div id="fsPageBodyWrapper" class="fsPageBodyWrapper" >
+    <div id="fsPageBody" class="fsStyleAutoclear fsPageBody d-flex justify-content-center pb-70px">
+
+        <main id="" class="max-width-1450" style="outline:none;">
+
+
+
+
+            <div class="fsPageLayout fsLayout fsOneColumnLayout fsStyleAutoclear" id="fsEl_120761" data-use-new="true">
+
+                <div class=" fsDiv fsStyleAutoclear" id="fsEl_120762">
+
+                    <div class="fsElement fsContent" id="fsEl_123082" data-use-new="true" ">
+
+                        <div class="fsElementContent">
+
+                                <h1>@subArticle.Name</h1>
+                                
+                            <p>
+                                <h3>
+                                    @Html.Raw(subArticle.ShortDescription)
+                                    
+                                    <br />
+                                    <br />
+                                    
+                                        @Html.Raw(@subArticle.ExtraInfo)
+                                        
+                                    </h3>
+                                    
+                            </p>
+                                <p>
+                                    <h3>
+                                        @Html.Raw(subArticle.Description)
+                                    </h3>
+                                </p>
+                                @*
+                            <p><a class="fs_style_106" href="" target="_blank"><strong>تفاصيل اكثر</strong></a></p>
+
+                            <ol>
+                                <li class="p2" style="text-align: right;">
+                                        يوت انيم أد مينيم فينايم,كيواس نوستريد
+
+                                        أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات .
+                                </li>
+                                
+                                <li class="p2" style="text-align: right;">
+                                        يوت انيم أد مينيم فينايم,كيواس نوستريد
+
+                                        أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات .
+                                </li>
+                            </ol>
+
+
+                           
+                            <div class="table-overflow" style="overflow-x: auto;" tabindex="0">
+                                <table align="center" border="1" cellpadding="3" cellspacing="3" class="fs_style_98" style="">
+                                    <tbody>
+                                        <tr>
+                                                <td style="text-align: center;"><strong>"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</strong></td>
+                                            <td style="text-align: center;">
+                                                <strong>
+                                                        لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت<br>
+                                                        لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت
+                                                </strong>
+                                            </td>
+                                                <td style="text-align: center;"><strong>"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</strong></td>
+                                                <td style="text-align: center;"><strong>"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</strong></td>
+                                        </tr>
+                                        <tr>
+                                                <td><b id="docs-internal-guid-bfc85d45-7fff-f734-d510-a4865255c9de">"لوريم ايبسوم </b></td>
+                                                <td>"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</td>
+                                                <td>"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</td>
+                                                <td>"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                    <p dir="ltr"><b id="docs-internal-guid-62773be4-7fff-1a28-7ab2-3439465cdb80">"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</b></p>
+                                            </td>
+                                                <td>"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</td>
+                                                <td>"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</td>
+                                                <td>"لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت</td>
+                                        </tr>
+
+
+
+
+
+                                    </tbody>
+                                </table>
+                                *@
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </main>
+    </div>
+</div>
+</div>
+
+
+

@@ -1,0 +1,258 @@
+﻿@using CMS;
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@inject IHtmlLocalizer<SharedResource> Localizer
+
+@{
+    ViewData["Title"] = "Careers";
+}
+<script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+<div class="bg-light-gray">
+
+    <div class="fsElement fsContainer panel-full-width panel-full-boundary panel-padding-thick" id="fsEl_130871" data-use-new="true">
+
+        <div class="fsElementContent">
+            <div class="fsElement fsContent" id="fsEl_130881" data-use-new="true">
+
+                <div class="fsElementContent">
+                    <h2 style="text-align: center;">@Localizer["ApplyingForAjob"]</h2>
+
+
+                </div>
+                <div class="fsElementContent">
+                    <p class="contact-us-text" style="text-align:center;">
+                        @Localizer["AreInterested"]
+
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="fsElement fsLayout fsTwoColumnLayout fsStyleAutoclear" id="fsEl_130872" data-use-new="true">
+
+                <div class=" fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear" id="fsEl_130875">
+
+                    <section class="fsElement fsContent card-1" id="fsEl_130880" data-use-new="true" aria-label="Request a demo">
+
+                        <div class="fsElementContent">
+                            <div class="fsCallout" style="float:right;"></div>
+
+                            <form class="row" method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Careers">
+                                <h1 class="title text-center mb-4 title-purple">@Localizer["ApplyingForAjob"]</h1>
+
+                                <!-- Name -->
+                                <div class="form-group position-relative input-purple-container col-md-6">
+                                    <label for="formName" class="form-label">
+                                        <i class="icon" data-feather="user"></i>
+                                        @Localizer["FullName"]<span class="red-star">*</span>
+                                    </label>
+                                    <input type="text" id="FullName" name="FullName" class="form-control form-control-lg thick col-md-6 input-purple" placeholder="" required>
+                                </div>
+
+                                <!-- E-mail -->
+                                <div class="form-group position-relative input-purple-container col-md-6">
+                                    <label for="formEmail" class="form-label">
+                                        <i class="icon" data-feather="mail"></i>
+                                        @Localizer["Email"] <span class="red-star">*</span>
+                                    </label>
+                                    <input type="email" id="Email" name="Email" class="form-control form-control-lg thick input-purple" placeholder="" required>
+                                </div>
+
+
+                                <!-- mobile -->
+                                <div class="form-group position-relative input-purple-container col-md-6">
+                                    <label for="formMobile" class="form-label">
+                                        @Localizer["Phone"] <span class="red-star">*</span>
+                                    </label>
+                                    <input type="number" id="Phone" name="Phone" class="form-control form-control-lg thick input-purple" placeholder="" required>
+                                </div>
+
+
+                                <!-- نوع الوظيفة -->
+                                <div class="form-group position-relative input-purple-container col-md-6">
+                                    <label for="formJobs" class="form-label">
+                                        @Localizer["TypeOfJob"] <span class="red-star">*</span>
+                                    </label>
+                                    <input data-info="Position" id="TypeOfJob" name="TypeOfJob" type="text" class="form-control form-control-lg thick input-purple" value="" required>
+                                </div>
+
+
+                                <!-- تاريخ الولادة -->
+                                <div class="form-group position-relative input-purple-container col-md-4">
+                                    <label for="formBirth" class="form-label">
+                                        @Localizer["DateOfBirth"]<span class="red-star">*</span>
+                                    </label>
+                                    <input type="date" id="DateOfBirth" name="DateOfBirth" class="form-control form-control-lg thick col-md-6 input-purple" placeholder="" required>
+                                </div>
+
+
+
+
+
+                                <!-- الخبرة -->
+                                <div class="form-group position-relative input-purple-container col-md-4">
+                                    <label for="formExp" class="form-label">
+                                        @Localizer["YearsOfExperience"]
+                                    </label>
+                                    <input type="number" id="YearsOfExperience" name="YearsOfExperience" class="form-control form-control-lg thick col-md-6 input-purple" placeholder="" required>
+                                </div>
+
+
+                                <!-- الحالية -->
+                                <div class="form-group position-relative input-purple-container col-md-4">
+                                    <label for="formCurr" class="form-label">
+                                        @Localizer["CurrentJob"]
+                                    </label>
+                                    <input id="CurrentJob" name="CurrentJob" class="form-control form-control-lg thick col-md-6 input-purple" placeholder="" required>
+                                </div>
+
+                                <div class="form-group position-relative input-purple-container col-md-4">
+                                    <label for="formNat" class="form-label">
+                                        @Localizer["Universcity"]<span class="red-star">*</span>
+                                    </label>
+                                    <input id="Universcity" name="Universcity" class="form-control form-control-lg thick col-md-6 input-purple" placeholder="" required>
+                                </div>
+                                <div class="form-group position-relative input-purple-container col-md-4">
+                                    <label for="formNat" class="form-label">
+                                        @Localizer["Academic_specialization"]<span class="red-star">*</span>
+                                    </label>
+                                    <input id="Salerey" name="Salerey" class="form-control form-control-lg thick col-md-6 input-purple" placeholder="" required>
+                                </div>
+                                <div class="form-group position-relative input-purple-container col-md-2">
+                                    <label  for="formNat" class="form-label">
+                                        @Localizer["Graduation"]<span class="red-star">*</span>
+                                    </label>
+                                    <input type="number" id="Graduation" name="Graduation" class="form-control form-control-lg thick col-md-6 input-purple" placeholder="" required>
+                                </div>
+                                <div class="form-group position-relative input-purple-container col-md-2">
+                                    <label for="formNat" class="form-label">
+                                        @Localizer["Selary"]<span class="red-star">*</span>
+                                    </label>
+                                    <input type="number" id="Selary" name="Selary" class="form-control form-control-lg thick col-md-6 input-purple" placeholder="" required>
+                                </div>
+                                <!-- الاقامة -->
+                                <div class="form-group position-relative input-purple-container col-md-4">
+                                    <label for="formLoc" class="form-label">
+                                        @Localizer["CountryOfResidence"]<span class="red-star">*</span>
+                                    </label>
+                                    <input id="CountryOfResidence" name="CountryOfResidence" class="form-control form-control-lg thick col-md-6 input-purple" placeholder="" required>
+                                </div>
+
+
+                                <!-- الجنسية -->
+                                <div class="form-group position-relative input-purple-container col-md-4">
+                                    <label for="formNat" class="form-label">
+                                        @Localizer["Nationality"]<span class="red-star">*</span>
+                                    </label>
+                                    <input id="Nationality" name="Nationality" class="form-control form-control-lg thick col-md-6 input-purple" placeholder="" required>
+                                </div> 
+                             
+                                <div class="form-group position-relative input-purple-container col-md-4">
+                                    <label for="CV" class="form-label">
+                                        @Localizer["CV"]<span class="red-star">*</span>
+                                    </label>
+                                    <input type="file" name="file" class="form-control form-control-lg thick col-md-6 input-purple" placeholder="" required>
+                                </div>
+
+
+
+                                <!-- Submit btn -->
+                                <div class="text-center input-purple-container " style="margin-top:30px;">
+                                    <button type="submit" id="send" class="btn submit-purple" tabIndex="-1">@Localizer["Submit"]</button>
+                                </div>
+
+
+
+
+                            </form>
+
+                        </div>
+                    </section>
+
+
+
+
+                </div>
+
+
+
+                <footer>
+                    <div class="fsElementFooterContent">
+                        <p><a id="demo" name="demo"></a></p>
+
+                    </div>
+                </footer>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+@*
+@section scripts{
+    <script>
+        document.getElementById('send').addEventListener('click', (e) => {
+            e.preventDefault();
+            Careers();
+        })
+        function Careers() {
+
+
+            var FullName = $("#FullName").val().trim();
+            var Email = $("#Email").val().trim();
+            var Phone = $("#Phone").val().trim();
+            var TypeOfJob = $("#TypeOfJob").val().trim();
+            var CountryOfResidence = $("#CountryOfResidence").val().trim();
+
+            var DateOfBirth = $("#DateOfBirth").val().trim();
+            var CurrentJob = $("#CurrentJob").val().trim();
+            var Nationality = $("#Nationality").val().trim();
+            var YearsOfExperience = $("#YearsOfExperience").val().trim();
+
+            if (FullName == "" || Email == "" || Phone == "") {
+                swal(
+                    "Warning",
+                    'Please Fill Out All Fields',
+                    'warning'
+                )
+            } else {
+                let data = { FullName: FullName, Email: Email, Phone: Phone, TypeOfJob: TypeOfJob, DateOfBirth: DateOfBirth, CurrentJob: CurrentJob, Nationality: Nationality, YearsOfExperience: YearsOfExperience, CountryOfResidence: CountryOfResidence }
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/Careers",
+                    data: (data),
+                    dataType: "json",
+                    success: function (data) {
+
+
+                        swal(
+                            data.Done,
+                            data.Message,
+                            data.Success,
+
+                        );
+                    },
+                    error:
+                        function (err, msg) {
+                            swal(
+                                'Ops !',
+                                'Something Went Wrong, Please Try Again Later',
+                                'error'
+                            )
+                        }
+                });
+            }
+        }
+    </script>
+}
+*@

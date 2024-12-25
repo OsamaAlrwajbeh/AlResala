@@ -1,0 +1,422 @@
+﻿@using CMS;
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@inject IHtmlLocalizer<SharedResource> Localizer
+@*@model List<Article>*@
+@{
+
+    //data News
+    List<Article> News = new List<Article>();
+
+    if (ViewBag.News != null)
+    {
+        News = ViewBag.News;
+    }
+
+
+
+
+    ArticleType NewsParent = new ArticleType();
+
+    if (ViewBag.TitleNews != null)
+    {
+        NewsParent = ViewBag.TitleNews;
+    }
+
+
+
+    //data Events
+    List<Article> events = new List<Article>();
+
+    if (ViewBag.Events != null)
+    {
+        events = ViewBag.Events;
+    }
+
+
+
+
+    ArticleType EventsParent = new ArticleType();
+
+    if (ViewBag.TitleEvents != null)
+    {
+        EventsParent = ViewBag.TitleEvents;
+    }
+
+    //title news and Event
+    Article titleEventsAndNews = new Article();
+    titleEventsAndNews = ViewBag.TitleEventsAndNews;
+    if (ViewBag.TitleEventsAndNews != null)
+    {
+        titleEventsAndNews = ViewBag.TitleEventsAndNews;
+    }
+
+
+
+    ViewData["Title"] = "News";
+}
+
+
+<header id="fsHeader" class="fsHeader">
+    <div id="modal" class="modal">
+        <span id="modal-close" class="modal-close">×</span>
+        <img id="modal-content" class="modal-content">
+        <div id="modal-caption" class="modal-caption"></div>
+    </div>
+
+
+    <div class=" fsBanner fsStyleAutoclear" id="fsEl_105048" data-settings-id="104258" data-use-new="true">
+
+        <div class="fsElement fsContainer hero-combo hero-offset hero-green-grey hero-texture" id="fsEl_117208" style=" height: 50vh;
+    background-position: center top;
+background-image:url('/@(titleEventsAndNews.FullImagePath)_1920x1080.webp')" data-use-new="true" has-breadcrumbs="" has-content="" columns="" resource="" updated="">
+
+            <div class="fsElementContent">
+                <div class="fsElement fsNavigation fsBreadcrumb" id="fsEl_117209" data-use-new="true">
+
+                    <div class="fsElementContent">
+                        <nav aria-label="breadcrumbs">
+                            <ul>
+                                <li aria-current="location">
+                                    <a href="/Home/Index">@Localizer["Home"]</a> <span aria-hidden="true" class="fsNavBreadcrumbSeperator">&gt;</span>
+                                </li>
+                                <li>
+                                    @titleEventsAndNews.Name
+                                </li>
+                                @*                                                    <li>
+                                <a href="../school-websites.html">School Websites</a> <span aria-hidden="true" class="fsNavBreadcrumbSeperator">&gt;</span>
+                                </li>*@
+
+
+                            </ul>
+                        </nav>
+
+                    </div>
+
+
+                </div>
+
+
+
+                @* title news and events   *@
+                <div class="fsElement fsLayout fsTwoColumnLayout fsStyleAutoclear" id="fsEl_117210" data-use-new="true">
+
+                    <div class=" fsDiv fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_117211">
+
+                        <div class="fsElement fsContent" id="fsEl_117212" data-use-new="true">
+
+                            <div class="fsElementContent">
+                                <h1>  @titleEventsAndNews.Name</h1>
+                                <span class="fs_style_96">@Html.Raw(titleEventsAndNews.Description)</span>
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+                    @* image page news and events   *@
+                    <div class=" fsDiv fsStyleColumn fsStyleColumn-2 fsStyleColumn-last fsStyleAutoclear" id="fsEl_117213">
+
+                        <div class="fsElement fsResourceElement fsSingleItem resource-shadow" id="fsEl_117214@(titleEventsAndNews.ID)" data-use-new="true" data-source-element-id="117214@(titleEventsAndNews.ID)" data-source-page-id="6977@(titleEventsAndNews.ID)">
+
+                            <div class="fsElementContent">
+                                <article class="fsResource fsResourceTypeImage d-none" style="display:none"><figure><picture><img alt="" data-aspect-ratio="0.6432291666666666" style="" src="/@(titleEventsAndNews.FullImagePath)_800x500.webp"></picture></figure></article>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</header>
+
+
+
+
+@* News   *@
+<div id="fsPageWrapper">
+    <div id="fsPageBodyWrapper" class="fsPageBodyWrapper">
+        <div id="fsPageBody" class="fsStyleAutoclear fsPageBody">
+
+
+
+
+
+
+            <div class="fsPageLayout fsLayout fsOneColumnLayout fsStyleAutoclear" style="width:100%" id="fsEl_1096888" data-use-new="true">
+
+                <div class=" fsDiv fsStyleAutoclear flex-direction-column" id="fsEl_1096893">
+
+                    <div class="fsElement fsContainer custom-post-filter tools-sticky-mobile max-width-1340 align-self-center" style="width:100%" id="fsEl_130602" data-use-new="true">
+
+                        <div class="fsElementContent">
+                            <div class="fsElement fsContent" id="fsEl_130603" data-use-new="true">
+
+                                <div class="fsElementContent">
+
+                                    <h1>@NewsParent.Name</h1>
+
+
+                                    <p><span class="fs_style_96">@Html.Raw(NewsParent.ShortDescription)</span></p>
+
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+
+                            <div class="fsElement fsPostElement fsGrid custom-post-filter-results-grey fsThumbnailXLarge fsItemCount_15" id="fsEl_130621" data-use-new="true" data-trigger-element-ids="[130614, 130617, 130611]" data-overwrite-title="">
+
+
+                                <div class="fsElement fsPostElement fsGrid custom-post-filter-results-grey fsThumbnailXLarge fsItemCount_15" id="fsEl_130621" data-use-new="true" data-trigger-element-ids="[130614, 130617, 130611]" data-overwrite-title="">
+
+
+
+
+                                    <div class="fsElementContent">
+
+                                        <div class="fsListItems fsStyleThreeColumns">
+                                            @*    data News   *@
+                                            @foreach (Article item in News)
+                                            {
+                                                <article class="fsStyleAutoclear fsBoard-182 fsCategory-401 has-image" data-post-id="14282" data-authenticated-comments="true" aria-labelledby="fsArticle_130621_14282">
+
+                                                    <a class="fsThumbnail fsPostLink fsPostBackgroundThumbnail" data-opens-in="page"
+                                                   data-page-id="7256" data-aspect-ratio="0.6666666666666666"
+                                                   href="@(ViewBag.Theme == "ar"? "/ar":"/en")/Home/Event/@(item.SEOPath)" alt="" style="background-image: url(&quot;/@(item.FullImagePath)_488x488.webp&quot;);" aria-hidden="true" tabindex="-1">
+                                                        <img data-aspect-ratio="0.6666666666666666" alt="you got this sign" style="" src="/@(item.FullImagePath)_488x488.webp">
+                                                    </a>
+                                                    @*src="/assets/img/@(item.ThumbURL)_288x288.webp"*@
+
+                                                    <div class="fsTitle" id="fsArticle_130621_14282">
+                                                        <a class="fsPostLink" data-opens-in="page" data-page-id="" href="">
+
+                                                            @item.Name
+                                                        </a>
+
+
+                                                    </div>
+                                                    <div class="fsElementFooterContent">
+                                                        <a class="fsPostLink fsReadMoreLink" data-opens-in="page" data-page-id="72561" href="@(ViewBag.Theme == "ar"? "/ar":"/en")/Home/NewsDetails/@item.SEOPath" aria-hidden="true" tabindex="-1">
+                                                        @Localizer["MoreRead"]
+                                                        <span class="fsStyleSROnly"></span>
+                                                    </a>
+                                                    </div>
+                                                   @* <footer>
+                                                        <div class="fsElementFooterContent">
+                                                            <p><a class="fs_style_102" href=" /Home/NewsDetails/@item.SEOPath" target="_blank">@Localizer["MoreRead"]</a></p>
+
+                                                        </div>
+                                                    </footer>*@
+
+                                                </article>
+
+
+
+                                            }
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* Events   *@
+<div id="fsPageWrapper">
+    <div id="fsPageBodyWrapper" class="fsPageBodyWrapper">
+        <div id="fsPageBody" class="fsStyleAutoclear fsPageBody">
+
+
+
+            <div class="fsPageLayout fsLayout fsOneColumnLayout fsStyleAutoclear" id="fsEl_1096881" style="width:100%" data-use-new="true">
+
+                <div class=" fsDiv fsStyleAutoclear flex-direction-column" id="fsEl_109689">
+                    <div class="fsElement fsContainer custom-post-filter tools-sticky-mobile max-width-1340 align-self-center" style="width:100%" id="fsEl_130602" data-use-new="true">
+
+                        <div class="fsElement fsContent" id="fsEl_130603" data-use-new="true">
+
+                            <div class="fsElementContent">
+
+
+                                <h1>@EventsParent.Name</h1>
+
+
+                                <p><span class="fs_style_96">@Html.Raw(EventsParent.ShortDescription)</span></p>
+
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="fsElement fsPostElement fsGrid custom-post-filter-results-grey fsThumbnailXLarge fsItemCount_15" id="fsEl_130621" data-use-new="true" data-trigger-element-ids="[130614, 130617, 130611]" data-overwrite-title="">
+
+
+                            <div class="fsElement fsPostElement fsGrid custom-post-filter-results-grey fsThumbnailXLarge fsItemCount_15" id="fsEl_130621" data-use-new="true" data-trigger-element-ids="[130614, 130617, 130611]" data-overwrite-title="">
+
+
+
+
+                                <div class="fsElementContent">
+
+                                    <div class="fsListItems fsStyleThreeColumns">
+                                        @*    data events   *@
+                                        @foreach (Article item in events)
+                                        {
+                                            <article class="fsStyleAutoclear fsBoard-182 fsCategory-401 has-image" data-post-id="14282" data-authenticated-comments="true" aria-labelledby="fsArticle_130621_14282">
+
+                                                <a class="fsThumbnail fsPostLink fsPostBackgroundThumbnail" data-opens-in="page"
+                                               data-page-id="7256" data-aspect-ratio="0.6666666666666666" alt="" style="background-image: url(&quot;/@(item.FullImagePath)_488x488.webp&quot;);" aria-hidden="true" tabindex="-1">
+                                                    @*                                                            <img data-aspect-ratio="0.6666666666666666" alt="you got this sign" style="" src="@(item.FullImagePath)_488x488.webp">
+                                                *@                                                            <img data-aspect-ratio="0.6666666666666666" alt="you got this sign" style="" src="/@(item.FullImagePath)_488x488.webp">
+                                                </a>
+                                                @*src="/assets/img/@(item.ThumbURL)_288x288.webp"*@
+
+                                                <div class="fsTitle" id="fsArticle_130621_14282">
+                                                    <a class="fsPostLink" data-opens-in="page" data-page-id="">
+
+                                                        @item.Name
+                                                    </a>
+
+
+                                                </div>
+                                                <div class="fsTitle" id="fsArticle_130621_14282">
+                                                   <a class="fsPostLink" data-opens-in="page" data-page-id="">
+
+                                                        <strong>@item.Path</strong>
+                                                    </a>
+
+
+                                                </div>
+                                                <footer>
+                                                    <div class="fsElementFooterContent">
+                                                        <p><a class="fs_style_102" href="@(ViewBag.Theme == "ar"? "/ar":"/en")/Home/Event/@item.SEOPath" target="_blank">@Localizer["MoreRead"]</a></p>
+
+                                                    </div>
+                                                </footer>
+
+                                            </article>
+
+
+                                        }
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+</div>
+

@@ -1,0 +1,133 @@
+﻿@using CMS;
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@inject IHtmlLocalizer<SharedResource> Localizer
+
+
+
+
+
+
+
+@{
+
+
+    List<Article> lstOurTeam = new List<Article>();
+
+    
+    if (ViewBag.DescriptionOurTeam != null)
+    {
+        lstOurTeam = ViewBag.DescriptionOurTeam;
+    }
+
+
+
+
+    ArticleType titleTeam = new ArticleType();
+    if (ViewBag.OurTeamTitle != null)
+    {
+        titleTeam = ViewBag.OurTeamTitle;
+    }
+
+    ViewData["Title"] = "OurTeam";
+}
+
+    <div id="fsPageWrapper">
+        <div id="fsPageBodyWrapper" class="fsPageBodyWrapper">
+            <div id="fsPageBody" class="fsStyleAutoclear fsPageBody">
+
+                <main id="fsPageContent" class="fsPageContent" style="outline:none;">
+
+
+
+
+                    <div class="fsPageLayout fsLayout fsOneColumnLayout fsStyleAutoclear" id="fsEl_109688" data-use-new="true">
+
+                        <div class=" fsDiv fsStyleAutoclear flex-direction-column" id="fsEl_1096894">
+
+                            <div class="fsElement fsContainer panel-full-width panel-pink" id="fsEl_114997" data-use-new="true">
+                            </div>
+                            <div class="fsElement fsContainer custom-post-filter tools-sticky-mobile max-width-1340 align-self-center" id="fsEl_130602" style="width:100%" data-use-new="true">
+
+                                <div class="fsElementContent">
+                                    <div class="fsElement fsContent" id="fsEl_130603" data-use-new="true">
+
+                                        <div class="fsElementContent text-lg-center"> 
+                                    
+                                    <h1>@titleTeam.Name</h1>
+                                    <span class="fs_style_96">@Html.Raw(titleTeam.Description)</span>
+                                        @*<h3 class="fsElementTitle">تعرف على فريق العمل في مدارس الرسالة</h3>*@
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                <section class="fsElement fsResourceElement fsGrid" style="width:100%" id="fsEl_124600" data-use-new="true" data-source-element-id="124600" data-source-page-id="7795" aria-label="Our executive leadership">
+                                    <div class="fsElementContent">
+                                        <div class="fsListItems fsStyleFourColumns">
+                                            @foreach (Article Item in lstOurTeam)
+                                                    { 
+                                                        <article class="fsResource fsStyleAutoclear fsResourceTypeImage">
+                                                <figure>
+                                                        <picture><img alt="" style="aspect-ratio: 270 / 370" data-aspect-ratio="1.0" src="/@(Item.FullImagePath)_450x450.webp"></picture>
+                                                    <figcaption>
+                                                        <p>
+                                                                <a class="fs_style_106" href="" target="" src=""> @Item.Name</a><br>
+                                                                @Html.Raw(Item.Description)
+                                                        </p>
+                                                    </figcaption>
+                                                </figure>
+                                            </article>
+                                            }
+                                        </div>
+                                    </div>
+
+                                </section>
+                                       
+
+
+
+
+
+
+
+                                </div>
+
+
+
+
+
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </main>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+   
+

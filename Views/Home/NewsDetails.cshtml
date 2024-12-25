@@ -1,0 +1,96 @@
+﻿@using CMS;
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@inject IHtmlLocalizer<SharedResource> Localizer
+
+
+@{
+
+
+	Article subArticle = new Article();
+	if (ViewBag.subArticle != null)
+	{
+		subArticle = ViewBag.subArticle;
+
+	}
+
+	ViewData["Title"] = "NewsDetails";
+
+
+}
+
+
+
+
+
+<div dir="rtl" class="news-container fsElement fsContainer panel-full-width panel-wide-boundary panel-light-grey panel-padding-thick" id="fsEl_123561" data-use-new="true">
+
+	<div class="fsElementContent">
+		<div class="fsElement fsLayout fsTwoColumnLayout fsStyleAutoclear" id="fsEl_123562" data-use-new="true">
+
+			<div class=" fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_123563">
+
+				<div class="fsElement fsContent" id="fsEl_123564" data-use-new="true">
+
+					<header>
+						<div class="fsElementHeaderContent">
+							<p><a id="getstarted" name="getstarted"></a></p>
+
+							<figure class="fsImage"><picture><img alt="Image NewsDetails" id="" src="/@(subArticle.FullImagePath)_800x500.webp" style=""></picture></figure>
+
+
+						</div>
+					</header>
+					<div class="fsElement fsEmbed featured-title mt-70px mb-20px" id="fsEl_122922" data-use-new="true">
+
+						<div class="fsElementContent">
+							@subArticle.Name
+
+						</div>
+
+
+					</div>
+					<div class="fsElementContent">
+						<h2>@subArticle.Name</h2>
+
+						<p><span class="fs_style_96">@subArticle.Path</span></p>
+
+						<p>
+							@Html.Raw(subArticle.Description)
+
+							<br />
+							<br />
+
+
+
+
+							@Html.Raw(subArticle.ExtraInfo)
+
+				
+
+						</p>
+					
+
+					</div>
+
+
+				</div>
+
+
+
+
+			</div>
+
+
+
+
+
+
+		</div>
+
+
+
+	</div>
+
+
+</div>

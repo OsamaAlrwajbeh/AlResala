@@ -1,0 +1,91 @@
+﻿
+@using CMS;
+
+
+
+@{
+
+	ViewData["Title"] = "Events";
+
+
+	Article eventByID = new Article();
+	if (ViewBag.subArticle != null)
+	{
+		eventByID = ViewBag.subArticle;
+	}
+
+	
+
+}
+
+
+
+
+<div dir="rtl" class="news-container fsElement fsContainer panel-full-width panel-wide-boundary panel-light-grey panel-padding-thick" id="fsEl_123561" data-use-new="true">
+
+	<div class="fsElementContent">
+		<div class="fsElement fsLayout fsTwoColumnLayout fsStyleAutoclear" id="fsEl_123562" data-use-new="true">
+
+			<div class=" fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_123563">
+
+				<div class="fsElement fsContent" id="fsEl_123564" data-use-new="true">
+
+					<header>
+						<div class="fsElementHeaderContent">
+							<p><a id="getstarted" name="getstarted"></a></p>
+
+							<figure class="fsImage"><picture><img alt="" Event" id="" src="/@(eventByID.FullImagePath)_800x500.webp" style=""></picture></figure>
+
+							<p>&nbsp;</p>
+
+						</div>
+					</header>
+					<div class="fsElement fsEmbed featured-title mt-70px mb-20px" id="fsEl_122922" data-use-new="true">
+
+						<div class="fsElementContent">
+							@eventByID.Name
+
+						</div>
+
+
+					</div>
+					<div class="fsElementContent">
+						<h2>@eventByID.Name</h2>
+
+						<p><span class="fs_style_96">@eventByID.Path</span></p>
+
+						<p>
+							@Html.Raw(eventByID.Description);
+
+							<br />
+							<br />
+
+							@Html.Raw(eventByID.ExtraInfo);
+
+
+						</p>
+
+
+					</div>
+
+
+				</div>
+
+
+
+
+			</div>
+
+
+
+
+
+
+		</div>
+
+
+
+	</div>
+
+
+</div>
